@@ -1,8 +1,10 @@
 package com.mirrorfiction.note.ui.add_edit_note.components
 
+import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.text.BasicTextField
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -41,12 +43,15 @@ fun TransparentHintTextField(
                 .onFocusChanged { onFocusChange(it) }
         )
         if (isHintVisible) {
-            Text(text = hint, style = textStyle, color = Color.DarkGray)
+            Text(text = hint, style = textStyle, color = MaterialTheme.colors.primary)
         }
     }
 }
 
 @Preview(showBackground = true)
+
+@Preview(showBackground = true, uiMode = UI_MODE_NIGHT_YES)
+
 @Composable
 fun ShowTextField() {
     NoteTheme {

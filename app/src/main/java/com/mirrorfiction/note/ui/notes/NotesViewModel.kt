@@ -1,6 +1,5 @@
 package com.mirrorfiction.note.ui.notes
 
-import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
@@ -37,6 +36,7 @@ class NotesViewModel @Inject constructor(
         getNotes(NoteOrder.Date(OrderType.Descending))
     }
 
+    // -----------------------------------------------
     fun onEvent(event: NotesEvent) {
         when (event) {
             is NotesEvent.Order -> {
