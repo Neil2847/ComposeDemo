@@ -17,9 +17,9 @@ import com.mirrorfiction.note.ui.notes.NoteScreen
 import com.mirrorfiction.note.ui.theme.NoteTheme
 import dagger.hilt.android.AndroidEntryPoint
 
+@ExperimentalAnimationApi
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
-    @ExperimentalAnimationApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {

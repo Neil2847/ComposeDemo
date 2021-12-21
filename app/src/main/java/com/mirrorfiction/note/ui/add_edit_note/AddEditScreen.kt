@@ -1,6 +1,5 @@
 package com.mirrorfiction.note.ui.add_edit_note
 
-import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.animation.Animatable
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
@@ -21,14 +20,11 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
-import androidx.navigation.compose.rememberNavController
 import com.mirrorfiction.note.data.model.Note
 import com.mirrorfiction.note.ui.add_edit_note.components.TransparentHintTextField
-import com.mirrorfiction.note.ui.theme.NoteTheme
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
@@ -70,9 +66,7 @@ fun AddEditNoteScreen(
     Scaffold(
         floatingActionButton = {
             FloatingActionButton(
-                onClick = {
-                    viewModel.onEvent(AddEditNoteEvent.SaveNote)
-                },
+                onClick = { viewModel.onEvent(AddEditNoteEvent.SaveNote) },
                 backgroundColor = MaterialTheme.colors.primary
             ) {
                 Icon(imageVector = Icons.Default.Save, contentDescription = "Save note")
